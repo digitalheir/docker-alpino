@@ -1,18 +1,23 @@
 FROM ubuntu:14.04
 MAINTAINER Maarten Trompper <m.f.a.trompper@uva.nl>
 
-# Download Alpino binaries
-RUN apt-get update && apt-get install -y wget
-RUN wget -q -O ~/alpino.tar.gz https://www.dropbox.com/s/askmk153bkq5f6n/Alpino-2.15-20723.tar.gz?dl=0
-
-# Unpack Alpino binaries
-RUN mkdir -p /opt/Alpino
-RUN tar -xf ~/alpino.tar.gz -C /opt/Alpino
-RUN rm ~/alpino.tar.gz
+# Download packages needed to run Alpino
+RUN apt-get update && \
+    apt-get install -y \ 
+      libxml2-dev \
+      libxslt1-dev \
+      python-dev \
+      wget
+      
+# Download & unpack Alpino binaries
+RUN wget -q -O ~/alpino.tar.gz \
+    http://www.dropbox.com/s/03ov4i1ibrvjjuv/Alpino-x86_64-linux-glibc2.15-20723-sicstus.tar.gz?dl=0 && \
+    tar -xf ~/alpino.tar.gz -C /opt && \
+    rm ~/alpino.tar.gz
 
 # Set $ALPINO_HOME
 ENV ALPINO_HOME=/opt/Alpino
-ENV $PATH=$PATH;$ALPINO_HOME
+ENV PATH=$PATH;/opt/Alpino/bin
 
 # Set locale (this is necessary for Alpino to work correctly)
 ENV LANG=en_US.UTF-8
