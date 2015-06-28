@@ -4,6 +4,7 @@ MAINTAINER Maarten Trompper <m.f.a.trompper@uva.nl>
 # Download packages needed to run Alpino
 RUN apt-get update && \
     apt-get install -y \ 
+      libtk8.5 \
       libxml2-dev \
       libxslt1-dev \
       python-dev \
@@ -17,7 +18,7 @@ RUN wget -q -O ~/alpino.tar.gz \
 
 # Set $ALPINO_HOME
 ENV ALPINO_HOME=/opt/Alpino
-ENV PATH=$PATH;/opt/Alpino/bin
+ENV PATH=$PATH:/opt/Alpino/bin
 
 # Set locale (this is necessary for Alpino to work correctly)
 ENV LANG=en_US.UTF-8

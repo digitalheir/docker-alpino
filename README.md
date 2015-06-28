@@ -5,7 +5,7 @@ The Dutch language parser [Alpino](www.let.rug.nl/vannoord/alp/Alpino) requires 
 Based on Alpino 2.15-20723. (http://www.let.rug.nl/~vannoord/alp/Alpino/binary/versions/Alpino-x86_64-linux-glibc2.15-20723-sicstus.tar.gz)
 
 ## Usage
-
+Install [Docker](https://www.docker.com/)
 
 ```sh
 docker run digitalheir/alpino /bin/sh -c "echo ik ben gek op spruitjes | Alpino -parse"
