@@ -6,5 +6,8 @@ Based on Alpino 2.15-20723. (http://www.let.rug.nl/~vannoord/alp/Alpino/binary/v
 
 ## Usage
 
+
+```sh
 docker run digitalheir/alpino /bin/sh -c "echo ik ben gek op spruitjes | Alpino -parse"
+```
 
