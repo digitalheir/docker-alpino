@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ruby:2.1.6
 MAINTAINER Maarten Trompper <m.f.a.trompper@uva.nl>
 
 # Download packages needed to run Alpino

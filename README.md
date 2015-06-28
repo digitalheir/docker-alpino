@@ -1,6 +1,6 @@
 # Dockerized Alpino
 
-The Dutch language parser [Alpino](www.let.rug.nl/vannoord/alp/Alpino) requires a set of libraries and environment variables that may be different on your machine. This container has everything set up cleanly, coming from ubuntu:14:04.
+The Dutch language parser [Alpino](www.let.rug.nl/vannoord/alp/Alpino) requires a set of libraries and environment variables that may be different on your machine. This container has everything set up cleanly, coming from the [ruby:2.1.6 image](https://registry.hub.docker.com/u/library/ruby/).
 
 Based on Alpino 2.15-20723. (http://www.let.rug.nl/~vannoord/alp/Alpino/binary/versions/Alpino-x86_64-linux-glibc2.15-20723-sicstus.tar.gz)
 
